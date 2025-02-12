@@ -93,3 +93,13 @@ li{
 p{
     padding: 5px;
 }
+.selected_list{
+    text-decoration: line-through;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 10px;
+    border-radius: 8px;
+    background-color: #0d9d3b;
+}
