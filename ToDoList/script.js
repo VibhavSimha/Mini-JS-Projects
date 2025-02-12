@@ -1,4 +1,5 @@
-let todoInput = document.getElementById('todo-input');
+document.addEventListener('DOMContentLoaded',()=>{
+    let todoInput = document.getElementById('todo-input');
 let addTaskBtn = document.getElementById('add-task-btn');
 let todoList = document.getElementById('tasks');
 
@@ -74,3 +75,4 @@ todoList.addEventListener(
         }
     }
 )
+})
