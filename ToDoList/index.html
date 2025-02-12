@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDoList</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+
     <div class="container">
         <h1>To-Do List</h1>
         <div class="interact">
-            <input type="text" class="task" placeholder="Add a task">
-            <button class="add">Add</button>
-            <ul class="tasks"></ul>
+            <input type="text" class="task" id="todo-input" placeholder="Add a task">
+            <button class="add" id="add-task-btn">Add</button>
         </div>
+        <ul class="tasks" type="none" id="tasks">
+        </ul>
     </div>
 </body>
 
