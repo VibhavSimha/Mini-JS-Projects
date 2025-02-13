@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             if(inputVal!=''){
                 try{
                    let weatherData=await fetchWeatherData(inputVal);
+                   displayWeatherData(weatherData);
                 }
                 catch(error){
                     showError();
@@ -21,13 +22,30 @@ document.addEventListener('DOMContentLoaded',()=>{
             }
         }
     )
-    function fetchWeatherData(city){
-
+    async function fetchWeatherData(city){
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+        try{
+            const response = await fetch(url);
+            if(!response.ok)throw new Error(`Error status:${response.status}`);
+            const json= await response.json();
+            console.log(json);
+            return json;
+        }catch (error){
+            console.error(error.mesage);
+            throw Error(error);
+        }
     }
     function displayWeatherData(weatherData){
-
+        cityOutput.textContent=weatherData.name;
+        
+        temperatureOutput.textContent+=weatherData.main.temp+" deg Celcius";
+        descriptionOutput.textContent+=weatherData.weather[0].description;
+        searchOutput.classList.remove('hidden');
+        searchOutput.classList.add('output_container');
+        errorMessage.classList.add('hidden');
     }
     function showError(){
+        searchOutput.classList.remove('output_container');
         searchOutput.classList.add('hidden');
         errorMessage.classList.remove('hidden');
     }
