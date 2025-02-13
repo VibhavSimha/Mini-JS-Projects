@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded',()=>{
         try{
             const response = await fetch(url);
             if(!response.ok)throw new Error(`Error status:${response.status}`);
-            const json= await response.json();
-            console.log(json);
-            return json;
+            const data= await response.json();
+            console.log(data);
+            return data;
         }catch (error){
             console.error(error.mesage);
             throw Error(error);
