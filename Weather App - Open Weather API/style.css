@@ -62,3 +62,11 @@ h1{
 .search-btn:hover{
     background-color: #7316d0;
 }
+.hidden{
+    display: none;
+}
+.output_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

@@ -13,9 +13,13 @@
             <input type="text" class="search" id="search" placeholder="Search for a city">
             <button class="search-btn" id="search-btn">Get Weather</button>
         </div>
-        <div class="output_class" id="output_class">
-
+        <div class="hidden" id="output_container">
+            <h2 id="city-name"></h2>
+            <p id="temperature"></p>
+            <p id="description"></p>
         </div>
+        <p id="error-message" class="hidden">City not found. Please try again.</p>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
