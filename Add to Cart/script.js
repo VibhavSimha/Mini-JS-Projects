@@ -26,6 +26,30 @@ document.addEventListener('DOMContentLoaded',()=>{
                 }
             }
         })
+    checkout.addEventListener('click',()=>{
+        alert(`Successfully Check out!\n${totalAmount.textContent}`);
+        while(cartList.firstChild)cartList.firstChild.remove();
+        cartItems=[
+            { id: 1, name: "Product 1", qty: 0, price: 25.5 },
+            { id: 2, name: "Product 2", qty: 0, price: 30 },
+            { id: 3, name: "Product 3", qty: 0, price: 20.5 }
+        ];
+        saveLocalStorage();
+        loadCart();
+    })
+    cartList.addEventListener('click',(event)=>{
+        if(event.target && event.target.matches('.deleteBtn')){
+            let idSel=event.target.id;
+            for(const item of cartItems){
+                if(item.id==idSel){
+                    item.qty=0;
+                    saveLocalStorage();
+                    loadCart();
+                    break;
+                }
+            }
+        }
+    })
     function saveLocalStorage()
     {
         cartItems.forEach(item => {
