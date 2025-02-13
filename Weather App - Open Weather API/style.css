@@ -88,10 +88,9 @@ h1{
     color: white;
     padding: 5px;
 }
-#error-message{
+.error-message{
     display: flex;
     justify-content: center;
     color: red;
     padding: 5px;
-    
 }

@@ -38,15 +38,17 @@ document.addEventListener('DOMContentLoaded',()=>{
     function displayWeatherData(weatherData){
         cityOutput.textContent=weatherData.name;
         
-        temperatureOutput.textContent+=weatherData.main.temp+" deg Celcius";
-        descriptionOutput.textContent+=weatherData.weather[0].description;
+        temperatureOutput.textContent=`Temperature: ${weatherData.main.temp} deg Celcius`;
+        descriptionOutput.textContent=`Weather: ${weatherData.weather[0].description}`;
         searchOutput.classList.remove('hidden');
         searchOutput.classList.add('output_container');
+        errorMessage.classList.remove('error-message');
         errorMessage.classList.add('hidden');
     }
     function showError(){
         searchOutput.classList.remove('output_container');
         searchOutput.classList.add('hidden');
         errorMessage.classList.remove('hidden');
+        errorMessage.classList.add('error-message');
     }
 })
