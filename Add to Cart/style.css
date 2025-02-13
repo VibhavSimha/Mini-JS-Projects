@@ -18,7 +18,7 @@ body{
     flex-direction: column;
     padding: 40px;
     border-radius: 8px;
-    width: 50vh;
+    width: 60vh;
 }
 h1{
     display: flex;
@@ -37,12 +37,16 @@ h1{
     align-items: flex-end;
     gap: 5px;
 }
-#checkout{
+#checkout,.addItem{
     background-color: #5410c8;
     color: white;
     padding: 10px;
     border-radius: 8px;
     cursor: pointer;
+    border: none;
+}
+#checkout:hover,.addItem:hover{
+    background-color: #3c2790;
 }
 li{
     display: flex;
@@ -51,15 +55,34 @@ li{
     padding: 20px;
     border-radius: 8px;
 }
-.addItem{
-    padding: 5px;
-    background-color:#5410c8 ;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-}
+
 .productDisplay{
     display: flex;
     color: white;
     align-items: center;
+}
+.hidden{
+    display: none;
+}
+.notHiddenPara{
+    display: flex;
+    justify-content: center;
+    color: rgb(162, 33, 33);
+    padding: 10px;
+    background-color: #333333;
+    font-size: x-large;
+    border-radius: 8px;
+}
+p{
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.deleteBtn{
+    background-color: rgb(176, 20, 20);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
 }
