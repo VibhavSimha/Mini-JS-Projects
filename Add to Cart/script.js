@@ -70,24 +70,35 @@ document.addEventListener('DOMContentLoaded',()=>{
             let totalCost=0;
             cartItems.forEach(item => {
                 if(item.qty){
-                    let cartItem=document.createElement('li');
-                    let itemName=document.createElement('p');
-                    itemName.textContent=item.name;
-                    let itemQty=document.createElement('p');
-                    itemQty.textContent=`Qty: ${item.qty}`;
-                    let itemTotal=document.createElement('p');
-                    itemTotal.textContent=`Total: $${item.total}`;
-                    let itemDelete=document.createElement('button');
-                    itemDelete.textContent='Delete'
-                    itemDelete.classList.add("deleteBtn");
-                    itemDelete.id=item.id;
-                    totalCost+=item.total;
-                    cartItem.appendChild(itemName);
-                    cartItem.appendChild(itemQty);
-                    cartItem.appendChild(itemTotal);
-                    cartItem.appendChild(itemDelete);
+                    //Create Element Method:
+                    // let cartItem=document.createElement('li');
+                    // let itemName=document.createElement('p');
+                    // itemName.textContent=item.name;
+                    // let itemQty=document.createElement('p');
+                    // itemQty.textContent=`Qty: ${item.qty}`;
+                    // let itemTotal=document.createElement('p');
+                    // itemTotal.textContent=`Total: $${item.total}`;
+                    // let itemDelete=document.createElement('button');
+                    // itemDelete.textContent='Delete'
+                    // itemDelete.classList.add("deleteBtn");
+                    // itemDelete.id=item.id;
+                    // totalCost+=item.total;
+                    // cartItem.appendChild(itemName);
+                    // cartItem.appendChild(itemQty);
+                    // cartItem.appendChild(itemTotal);
+                    // cartItem.appendChild(itemDelete);
 
-                    cartList.appendChild(cartItem);
+                    // cartList.appendChild(cartItem);
+                    
+                    //Inner HTML Method:
+                    totalCost+=item.total;
+                    cartList.innerHTML+=`
+                    <li>
+                    <p>${item.name}</p>
+                    <p>Qty: ${item.qty}</p>
+                    <p>Total: $${item.total}</p>
+                    <button class="deleteBtn" id="${item.id}">Delete</button>
+                    </li>`
                 }
             });
             console.log("Total cost:",totalCost);
