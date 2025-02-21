@@ -39,9 +39,7 @@ If an invalid city is entered, an error message is shown.
 
 - API Key:
 Replace the placeholder API key in script.js with your own OpenWeather API key:
-
     const API_KEY = "YOUR_API_KEY_HERE"; // Replace with your API key
-
 - Styling:
 Modify style.css to adjust the appearance of the app to suit your preferences.
 - Features:
