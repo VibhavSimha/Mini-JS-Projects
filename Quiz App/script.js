@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let resultContainer = document.getElementById('resultContainer');
 
 
-    //Add/Modify Questions
+    //Add/Modify Questions below by modifying each object retaining the properties question,op1-4,selected,ans
     let questions = JSON.parse(localStorage.getItem('questions')) ||
         [
             {
