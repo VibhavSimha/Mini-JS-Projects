@@ -77,10 +77,22 @@ document.addEventListener('DOMContentLoaded', () => {
             quizContainer.innerHTML = `
         <h2>${item.question}</h2>
         <form id="optionForm" class="optionForm">
-        <input type="radio" name="options" value='${item.op1}'>${item.op1}</input>
-        <input type="radio" name="options" value='${item.op2}'>${item.op2}</input>
-        <input type="radio" name="options" value='${item.op3}'>${item.op3}</input>
-        <input type="radio" name="options" value='${item.op4}'>${item.op4}</input>
+        <div>
+        <input type="radio" name="options" id="option1" value='${item.op1}'>
+        <label for="option1">${item.op1}</label>
+        </div>
+        <div>
+        <input type="radio" name="options" id="option2" value='${item.op2}'>
+        <label for="option2">${item.op2}</label>
+        </div>
+        <div>
+        <input type="radio" name="options" id="option3" value='${item.op3}'>
+        <label for="option3">${item.op3}</label>
+        </div>
+        <div>
+        <input type="radio" name="options" id="option4" value='${item.op4}'>
+        <label for="option4">${item.op4}</label>
+        </div>
         <button type="submit" class='hidden' id="nextQuestion">Next Question</button>
         </form>
         `
