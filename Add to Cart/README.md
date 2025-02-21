@@ -17,10 +17,10 @@ The Add To Cart project is designed as a lightweight demo for understanding basi
 ## Customization
 
 # Updating Products:
-    To change the product list or prices, modify the cartItems array in script.js:
+To change the product list or prices, modify the cartItems array in script.js:
 
-let cartItems = JSON.parse(localStorage.getItem('cart')) || [
-    { id: 1, name: "Product 1", qty: 0, price: 25.5 },
-    { id: 2, name: "Product 2", qty: 0, price: 30 },
-    { id: 3, name: "Product 3", qty: 0, price: 20.5 }
-];
+    let cartItems = JSON.parse(localStorage.getItem('cart')) || [
+        { id: 1, name: "Product 1", qty: 0, price: 25.5 },
+        { id: 2, name: "Product 2", qty: 0, price: 30 },
+        { id: 3, name: "Product 3", qty: 0, price: 20.5 }
+    ];
