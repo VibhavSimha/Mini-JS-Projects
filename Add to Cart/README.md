@@ -14,9 +14,9 @@ The Add To Cart project is designed as a lightweight demo for understanding basi
 - **Checkout Process:** A checkout button alerts the total amount and clears the cart.
 - **Local Storage Integration:** Cart data is stored in the browser so that it persists even when the page is reloaded.
  
-## Customization
+# Customization
 
-# Updating Products:
+## Updating Products:
 To change the product list or prices, modify the cartItems array in script.js:
 
     let cartItems = JSON.parse(localStorage.getItem('cart')) || [
