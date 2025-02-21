@@ -24,7 +24,7 @@ To modify or add new questions, edit the questions array in script.js. Each ques
 - ans: The correct answer for scoring.
 
 Example:
-
+```javascript
     let questions = JSON.parse(localStorage.getItem('questions')) || [
         {
             question: "What is the capital of France?",
@@ -37,4 +37,5 @@ Example:
         },
         // Add additional questions as needed...
     ];
+```
 
